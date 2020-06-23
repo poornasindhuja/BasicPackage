@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="AdventureWorks2014 Adonet"
+  DTS:DTSID="{BF8F808D-BA35-40CE-9605-951BBAECCD43}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=LAPTOP-UTOLO9MS\SQLEXPRESS01;Initial Catalog=AdventureWorks2014;Integrated Security=True;Application Name=SSIS-BasicPackage-{BF8F808D-BA35-40CE-9605-951BBAECCD43}LAPTOP-UTOLO9MS\SQLEXPRESS01.AdventureWorks20141;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

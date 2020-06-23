@@ -1,0 +1,952 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/23/2020 11:31:54 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-UTOLO9MS"
+  DTS:CreatorName="LAPTOP-UTOLO9MS\SINDHU"
+  DTS:DTSID="{1CA9AFA6-99F9-4ADC-95AE-3B33D7F12123}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.123"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{EA7E2962-CCA7-4D13-98AF-CB32F9985A8E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{A596C1EC-4CF9-427C-AB4C-DF9C26040C6B}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\office\SSIS Training\Session 5\HR.Department.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepartmentID"
+              DTS:DTSID="{08CE8879-7FFF-4B89-84AE-640F171C7579}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{4111EF9C-25A8-41EA-82D9-CF306EBC515A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GroupName"
+              DTS:DTSID="{BAE0DF24-B710-4CE4-BE4C-0F472A5BEA32}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ModifiedDate"
+              DTS:DTSID="{F522F60F-3978-4A5C-8998-85A9BCF70B34}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Result"
+              DTS:DTSID="{6EE8788E-787A-4F2A-80FA-BE147F02274B}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{2BEACF85-2959-4ED8-8F07-79B849731DE4}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\office\BI\SSIS Training\Session2\HR.Department.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepartmentID"
+              DTS:DTSID="{4E2C0556-49C5-49BE-B32E-72BDCF449AC1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{B39D25E4-4DC0-4394-9E49-B2D92415FAC3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GroupName"
+              DTS:DTSID="{CE9CF2D4-A1B3-4C5D-BBB7-EDC5FE6021A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ModifiedDate"
+              DTS:DTSID="{7F5A16AE-FB41-44FC-AAB1-597B1AE71B7D}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{414FA403-20D4-4FA9-91CE-B39DB73571C3}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x002C_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="E:\office\BI\SSIS Training\Session2\HrDepartment(adoCM).csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DepartmentID"
+              DTS:DTSID="{36FA6B7F-4832-4211-9F71-2AAD6DF56419}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Name"
+              DTS:DTSID="{46E5528D-5A20-4195-95BB-0CC367DA9C6F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GroupName"
+              DTS:DTSID="{39FC1776-95A6-46C4-9AAB-95EA0BD0D7BB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ModifiedDate"
+              DTS:DTSID="{95B3C3B0-8DC7-4F01-B7D8-8CAD04AC463F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Move data into Flat file using ADO NET CM"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{8A602D8B-C762-4A67-AE39-710FD128DB1E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Move data into Flat file using ADO NET CM"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:EventHandlers>
+        <DTS:EventHandler
+          DTS:refId="Package\Move data into Flat file using ADO NET CM.EventHandlers[OnError]"
+          DTS:CreationName="OnError"
+          DTS:DTSID="{2D78D1AC-2D35-4F37-80F0-125A961E5451}"
+          DTS:EventID="0"
+          DTS:EventName="OnError"
+          DTS:LocaleID="-1">
+          <DTS:Variables>
+            <DTS:Variable
+              DTS:CreationName=""
+              DTS:Description="The propagate property of the event"
+              DTS:DTSID="{6C4B25A2-AD10-4553-AAEF-F11B6F123B9E}"
+              DTS:IncludeInDebugDump="6789"
+              DTS:Namespace="System"
+              DTS:ObjectName="Propagate">
+              <DTS:VariableValue
+                DTS:DataType="11">-1</DTS:VariableValue>
+            </DTS:Variable>
+          </DTS:Variables>
+          <DTS:Executables />
+        </DTS:EventHandler>
+      </DTS:EventHandlers>
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="ADO NET Source"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"HumanResources"."Department"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Connections[IDbConnection]"
+                  connectionManagerID="{BF8F808D-BA35-40CE-9605-951BBAECCD43}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2014 Adonet]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[DepartmentID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DepartmentID]"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[DepartmentID]"
+                      name="DepartmentID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[GroupName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[GroupName]"
+                      length="50"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[GroupName]"
+                      name="GroupName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[DepartmentID]"
+                      dataType="i2"
+                      name="DepartmentID" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[GroupName]"
+                      dataType="wstr"
+                      length="50"
+                      name="GroupName" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DepartmentID]"
+                      dataType="i2"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[DepartmentID]"
+                      name="DepartmentID" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[GroupName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[GroupName]"
+                      name="GroupName" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].Columns[DepartmentID]"
+                      cachedDataType="i2"
+                      cachedName="DepartmentID"
+                      externalMetadataColumnId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DepartmentID]"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[DepartmentID]" />
+                    <inputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].Columns[GroupName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="GroupName"
+                      externalMetadataColumnId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GroupName]"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[GroupName]" />
+                    <inputColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      externalMetadataColumnId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output].Columns[ModifiedDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DepartmentID]"
+                      dataType="i2"
+                      name="DepartmentID" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GroupName]"
+                      dataType="wstr"
+                      length="50"
+                      name="GroupName" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Move data into Flat file using ADO NET CM.Paths[ADO NET Source Output]"
+              endId="Package\Move data into Flat file using ADO NET CM\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="ADO NET Source Output"
+              startId="Package\Move data into Flat file using ADO NET CM\ADO NET Source.Outputs[ADO NET Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Move data into Flat file using OLEDB CM"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7823C12D-60BF-46F5-9CF8-8A9D35B19A93}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Move data into Flat file using OLEDB CM"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="16393"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].Columns[DepartmentID]"
+                      cachedDataType="i2"
+                      cachedName="DepartmentID"
+                      externalMetadataColumnId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DepartmentID]"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[DepartmentID]" />
+                    <inputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]" />
+                    <inputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].Columns[GroupName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="GroupName"
+                      externalMetadataColumnId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GroupName]"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[GroupName]" />
+                    <inputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].Columns[ModifiedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ModifiedDate"
+                      externalMetadataColumnId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DepartmentID]"
+                      dataType="i2"
+                      name="DepartmentID" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[GroupName]"
+                      dataType="wstr"
+                      length="50"
+                      name="GroupName" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[HumanResources].[Department]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="{73EA6ED4-8F66-4842-B542-2789B30C6479}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AdventureWorks2014 OLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[DepartmentID]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DepartmentID]"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[DepartmentID]"
+                      name="DepartmentID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[GroupName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GroupName]"
+                      length="50"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[GroupName]"
+                      name="GroupName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].Columns[ModifiedDate]"
+                      name="ModifiedDate"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DepartmentID]"
+                      dataType="i2"
+                      name="DepartmentID" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[GroupName]"
+                      dataType="wstr"
+                      length="50"
+                      name="GroupName" />
+                    <externalMetadataColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      name="ModifiedDate" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DepartmentID]"
+                      dataType="i2"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DepartmentID]"
+                      name="DepartmentID" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GroupName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[GroupName]"
+                      name="GroupName" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ModifiedDate]"
+                      name="ModifiedDate" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Move data into Flat file using OLEDB CM.Paths[OLE DB Source Output]"
+              endId="Package\Move data into Flat file using OLEDB CM\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Move data into Flat file using OLEDB CM\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{0670ACEB-96B1-401F-BD77-C97B76DFF989}"
+      DTS:From="Package\Move data into Flat file using OLEDB CM"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Move data into Flat file using ADO NET CM" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="267.2,41.6"
+          Id="Package\Move data into Flat file using OLEDB CM"
+          TopLeft="379.166651599938,143.866667810016" />
+        <NodeLayout
+          Size="278.4,41.6"
+          Id="Package\Move data into Flat file using ADO NET CM"
+          TopLeft="443.33331571685,221.866668429905" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="512.766651599938,185.466667810016">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="69.7666641169125,36.4000006198884"
+              Start="0,0"
+              End="69.7666641169125,28.9000006198884">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.2000003099442" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.2000003099442"
+                    Point2="0,18.2000003099442"
+                    Point3="4,18.2000003099442" />
+                  <mssgle:LineSegment
+                    End="65.7666641169125,18.2000003099442" />
+                  <mssgle:CubicBezierSegment
+                    Point1="65.7666641169125,18.2000003099442"
+                    Point2="69.7666641169125,18.2000003099442"
+                    Point3="69.7666641169125,22.2000003099442" />
+                  <mssgle:LineSegment
+                    End="69.7666641169125,28.9000006198884" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Move data into Flat file using OLEDB CM">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Move data into Flat file using OLEDB CM\OLE DB Source"
+          TopLeft="549.166644844745,132.60000105381" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Move data into Flat file using OLEDB CM\Flat File Destination"
+          TopLeft="516.666646136179,311.133335805999" />
+        <EdgeLayout
+          Id="Package\Move data into Flat file using OLEDB CM.Paths[OLE DB Source Output]"
+          TopLeft="625.166644844745,174.20000105381">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-23.299998708566,136.933334752189"
+              Start="0,0"
+              End="-23.299998708566,129.433334752189">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.4666673760944" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,64.4666673760944"
+                    Point2="0,68.4666673760944"
+                    Point3="-4,68.4666673760944" />
+                  <mssgle:LineSegment
+                    End="-19.299998708566,68.4666673760944" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-19.299998708566,68.4666673760944"
+                    Point2="-23.299998708566,68.4666673760944"
+                    Point3="-23.299998708566,72.4666673760944" />
+                  <mssgle:LineSegment
+                    End="-23.299998708566,129.433334752189" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Move data into Flat file using OLEDB CM\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Move data into Flat file using ADO NET CM">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Move data into Flat file using ADO NET CM\ADO NET Source"
+          TopLeft="339,136" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Move data into Flat file using ADO NET CM\Flat File Destination"
+          TopLeft="344,275" />
+        <EdgeLayout
+          Id="Package\Move data into Flat file using ADO NET CM.Paths[ADO NET Source Output]"
+          TopLeft="419,177.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="10.1999999999999,97.4"
+              Start="0,0"
+              End="10.1999999999999,89.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.7"
+                    Point2="0,48.7"
+                    Point3="4,48.7" />
+                  <mssgle:LineSegment
+                    End="6.19999999999993,48.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.19999999999993,48.7"
+                    Point2="10.1999999999999,48.7"
+                    Point3="10.1999999999999,52.7" />
+                  <mssgle:LineSegment
+                    End="10.1999999999999,89.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Move data into Flat file using ADO NET CM\ADO NET Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
